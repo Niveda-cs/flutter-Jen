@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    environment {
+        FLUTTER_HOME = 'C:\\Users\\acer\\Desktop\\flutter\\flutter'
+        PATH = "${FLUTTER_HOME}\\bin;${env.PATH}"
+    }
+
     stages {
 
         stage('Checkout') {
